@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Outfit:wght@400;800&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap'); */
+
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+header img {
+    width: 150px;
+    padding-bottom: 50px;
+}
+
+/* CSS REVIEW */
+main {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    padding-top: 80px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 90;
+    font-size: 2.6rem;
+}
+
+input {
+    font-family: 'Inter', sans-serif;
+    background-color: transparent;
+    border: 0px;
+    text-align: left;
+
+
+}
+
+hr {
+    color: blueviolet;
+    width: 65%;
+
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    color: black;
+    background-color: aqua;
+    border-top: 12px solid aqua;
+    border-bottom: 12px solid aqua;
+    border-left: 30px solid aqua;
+    border-right: 30px solid aqua;
+    box-shadow: 0px 0px 20px 0px aqua;
+    margin-top: 3em;
+}
