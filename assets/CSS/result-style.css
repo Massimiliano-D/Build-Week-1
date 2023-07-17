@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Outfit:wght@400;800&display=swap");
+body {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+header img {
+  width: 150px;
+  padding-bottom: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  color: white;
+}
+p,
+li,
+h3 {
+  font-family: "Inter", sans-serif;
+}
+h2,
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+nav p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 55px;
+  margin-top: 0;
+}
+nav {
+  text-align: center;
+  line-height: 55px;
+}
+
+.lft {
+  text-align: left;
+  display: inline-block;
+  margin-block: 0;
+  /* position: absolute; */
+  vertical-align: middle;
+  padding-right: 250px;
+}
+#TORTA {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: brown;
+}
+.rgt {
+  text-align: right;
+  display: inline-block;
+  margin-block: 0;
+  /* margin-left: 1224px; */
+  /* position: absolute; */
+  vertical-align: middle;
+  padding-left: 250px;
+}
+#content {
+  text-align: center;
+}
+span {
+  font-size: 20px;
+}
+h1 {
+  margin-bottom: 0;
+}
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: black;
+  background-color: aqua;
+  border-top: 12px solid aqua;
+  border-bottom: 12px solid aqua;
+  border-left: 30px solid aqua;
+  border-right: 30px solid aqua;
+  box-shadow: 0px 0px 20px 0px aqua;
+  text-align: center;
+}
+#footer {
+  text-align: center;
+  margin-left: 25px;
+  margin-top: 60px;
+}
