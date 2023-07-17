@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Outfit:wght@400;600;800&display=swap");
+body {
+  margin: 0;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+header img {
+  width: 150px;
+  padding-bottom: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: white;
+}
+p,
+li {
+  font-family: "Inter", sans-serif;
+}
+#second-title {
+  margin: 0;
+  color: rgb(205, 69, 169);
+  font-size: 25px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 55px;
+}
+h1 span {
+  font-weight: bolder;
+}
+p {
+  margin-top: 5px;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+ul {
+  padding-left: 15px;
+}
+#list li {
+  font-size: 13px;
+  padding-bottom: 3px;
+}
+form {
+  display: inline-block;
+  color: white;
+  padding-top: 70px;
+  padding-right: 100px;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: black;
+  background-color: aqua;
+  border-top: 12px solid aqua;
+  border-bottom: 12px solid aqua;
+  border-left: 30px solid aqua;
+  border-right: 30px solid aqua;
+  box-shadow: 0px 0px 20px 0px aqua;
+}
