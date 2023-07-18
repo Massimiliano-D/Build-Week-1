@@ -3,13 +3,17 @@ body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0;
 }
-
+.all {
+  text-align: center;
+}
 header img {
-  width: 150px;
-  padding-bottom: 50px;
+  width: 9.375em;
+  padding-bottom: 1.5em;
+  padding-left: 20em;
 }
 h1,
 h2,
@@ -31,35 +35,37 @@ h2,
 h1 {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 3.125em;
+  line-height: 1.1em;
 }
 
 nav p {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 55px;
+  font-size: 1.563em;
+  line-height: 1.1em;
   margin-top: 0;
 }
 nav {
-  text-align: center;
-  line-height: 55px;
+  line-height: 1.1em;
+  margin: 0;
+}
+nav h1 {
+  margin-top: 0em;
 }
 
 .lft {
   text-align: left;
   display: inline-block;
   margin-block: 0;
-  /* position: absolute; */
   vertical-align: middle;
-  padding-right: 250px;
+  padding-inline: 2.5em;
 }
 #TORTA {
   display: inline-block;
   vertical-align: middle;
-  width: 400px;
-  height: 400px;
+  width: 20em;
+  height: 20em;
   border-radius: 50%;
   background-color: brown;
 }
@@ -67,16 +73,16 @@ nav {
   text-align: right;
   display: inline-block;
   margin-block: 0;
-  /* margin-left: 1224px; */
-  /* position: absolute; */
   vertical-align: middle;
-  padding-left: 250px;
+  padding-inline: 2.5em;
+}
+.titoletto {
+  font-size: 0.5em;
 }
 #content {
-  text-align: center;
 }
 span {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 h1 {
   margin-bottom: 0;
@@ -84,18 +90,16 @@ h1 {
 button {
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  font-size: 17px;
+  font-size: 1em;
   color: black;
   background-color: aqua;
-  border-top: 12px solid aqua;
-  border-bottom: 12px solid aqua;
-  border-left: 30px solid aqua;
-  border-right: 30px solid aqua;
-  box-shadow: 0px 0px 20px 0px aqua;
-  text-align: center;
+  border-top: 0.75em solid aqua;
+  border-bottom: 0.75em solid aqua;
+  border-left: 2em solid aqua;
+  border-right: 2em solid aqua;
+  box-shadow: 0em 0em 1.25em 0em aqua;
 }
 #footer {
-  text-align: center;
-  margin-left: 25px;
-  margin-top: 60px;
+  margin-left: 1.563em;
+  margin-top: 3.75em;
 }
