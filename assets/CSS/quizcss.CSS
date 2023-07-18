@@ -14,10 +14,15 @@ header img {
   display: inline-block;
 }
 #torta {
-  display: inline-end;
-
+  display: inline-block;
   width: 5em;
   height: 5em;
   border-radius: 50%;
   background-color: brown;
+}
+header div {
+  display: inline-block;
+  position: relative;
+  left: 25em;
+  top: 1.3em;
 }
