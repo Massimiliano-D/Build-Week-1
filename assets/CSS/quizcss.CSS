@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  background-image: url(/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content {
+  text-align: center;
+  color: white;
+}
+header img {
+  width: 9.375em;
+  padding-left: 15em;
+  display: inline-block;
+}
+#torta {
+  display: inline-end;
+
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: brown;
+}
