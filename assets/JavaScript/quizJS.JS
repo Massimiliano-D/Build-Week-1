@@ -96,19 +96,6 @@ for (let i = 0; i < questions.length; i++) {
   domande.push(questions[i].question);
 }
 
-function createButtons(correctAnswer, incorrectAnswers) {
-  const totalOptions = incorrectAnswers.length + 1;
-  const numButtons = correctAnswer === "True" || correctAnswer === "False" ? 2 : totalOptions;
-
-  for (let i = 0; i < numButtons; i++) {
-    const button = document.createElement("button");
-    button.innerText = i === 0 ? correctAnswer : incorrectAnswers[i - 1];
-    document.body.appendChild(button);
-    let buttons = document.querySelectorAll("button");
-    buttons[i].addEventListener("click", generateRandomQuestion);
-  }
-}
-
 // Genera un indice casuale per selezionare una domanda dall'array
 function getRandomQuestionIndex() {
   return Math.floor(Math.random() * questions.length);
