@@ -167,3 +167,18 @@ function createButtons(correctAnswer, incorrectAnswers) {
     buttons[i].addEventListener("click", generateRandomQuestion);
   }
 }
+
+const startTime = () => {
+  let seconds = 60;
+  let torta = document.getElementById("torta");
+
+  let timer = setInterval(function () {
+    seconds--;
+    torta.innerText = seconds;
+    if (seconds <= 0) {
+      console.log(seconds);
+      clearInterval(timer);
+    }
+  }, 1000);
+};
+startTime();
