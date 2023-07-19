@@ -96,23 +96,11 @@ for (let i = 0; i < questions.length; i++) {
   domande.push(questions[i].question);
 }
 
-function createButtons(correctAnswer, incorrectAnswers) {
-  const totalOptions = incorrectAnswers.length + 1;
-  const numButtons = correctAnswer === "True" || correctAnswer === "False" ? 2 : totalOptions;
-
-  for (let i = 0; i < numButtons; i++) {
-    const button = document.createElement("button");
-    button.innerText = i === 0 ? correctAnswer : incorrectAnswers[i - 1];
-    document.body.appendChild(button);
-    let buttons = document.querySelectorAll("button");
-    buttons[i].addEventListener("click", generateRandomQuestion);
-  }
-}
-
 // Genera un indice casuale per selezionare una domanda dall'array
 function getRandomQuestionIndex() {
   return Math.floor(Math.random() * questions.length);
 }
+<<<<<<< Updated upstream
 let indexOfUsedQuestions = [];
 
 // Ottiene una domanda casuale e crea i bottoni corrispondenti
@@ -137,3 +125,98 @@ const advanceQuestions = () => {
     break;
   }
 };
+=======
+// const advanceQuestions = () => {
+//   const span = document.querySelector("span");
+
+//   for (let i = 0; i < 10; i++) {
+//     span.innerText = i + 1;
+//     break;
+//   }
+// };
+let indexOfUsedQuestions = [];
+let indexOfFooter = [];
+for (let i = 1; i <= 10; i++) {
+  indexOfFooter.push(i);
+}
+console.log(indexOfFooter);
+const removeFooter = () => {
+  let h3 = document.querySelectorAll("h3");
+  h3[0].remove();
+};
+function generateRandomQuestion() {
+  // Controlla se sono state esaurite tutte le domande disponibili
+  if (indexOfUsedQuestions.length === questions.length) {
+    alert("Hai esaurito tutte le domande disponibili!");
+    return;
+  }
+
+  // Genera un indice casuale per selezionare una domanda non ancora utilizzata
+  let randomQuestionIndex;
+  do {
+    randomQuestionIndex = getRandomQuestionIndex();
+  } while (indexOfUsedQuestions.includes(randomQuestionIndex));
+
+  indexOfUsedQuestions.push(randomQuestionIndex); // Aggiungi l'indice alla lista delle domande utilizzate
+
+  const randomQuestion = questions[randomQuestionIndex];
+  const correctAnswer = randomQuestion.correct_answer;
+  const incorrectAnswers = randomQuestion.incorrect_answers.flat();
+
+  let h1 = document.querySelector("h1");
+  h1.innerText = randomQuestion.question;
+
+  createButtons(correctAnswer, incorrectAnswers);
+}
+generateRandomQuestion();
+function removeAllButtons() {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => button.remove());
+}
+let num = 0;
+const numQuestions = () => {
+  let footer = document.querySelector("footer");
+  let h3 = document.createElement("h3");
+  num += 1;
+  footer.appendChild(h3);
+  let allH3 = document.querySelectorAll("h3");
+  h3.innerHTML = "QUESTION <span></span>/10";
+  let span = document.querySelector("span");
+  span.innerText = num;
+  console.log(num);
+};
+function createButtons(correctAnswer, incorrectAnswers) {
+  removeAllButtons(); // Rimuovi tutti i bottoni precedenti prima di creare quelli nuovi
+
+  const totalOptions = incorrectAnswers.length + 1;
+  const numButtons = correctAnswer === "True" || correctAnswer === "False" ? 2 : totalOptions;
+  let div = document.getElementById("answer");
+  for (let i = 0; i < numButtons; i++) {
+    const button = document.createElement("button");
+    button.innerText = i === 0 ? correctAnswer : incorrectAnswers[i - 1];
+    div.appendChild(button);
+    let buttons = document.querySelectorAll("button");
+    buttons[i].addEventListener("click", (event) => {
+      generateRandomQuestion();
+      numQuestions();
+      removeFooter();
+    });
+  }
+}
+
+const startTime = () => {
+  let seconds = 60;
+  let torta = document.getElementById("torta");
+
+  let timer = setInterval(function () {
+    seconds--;
+    torta.innerText = seconds;
+    if (seconds <= 0) {
+      console.log(seconds);
+      clearInterval(timer);
+    }
+  }, 1000);
+};
+startTime();
+numQuestions();
+>>>>>>> Stashed changes
