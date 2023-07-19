@@ -180,9 +180,9 @@ const numQuestions = () => {
   num += 1;
   footer.appendChild(h3);
   let allH3 = document.querySelectorAll("h3");
-  h3.innerHTML = "QUESTION <span></span>/10";
+  h3.innerHTML = `QUESTION <span>${num}</span>/10`;
   let span = document.querySelector("span");
-  span.innerText = num;
+  // span.innerHTML = `${num}`;
   console.log(num);
 };
 function createButtons(correctAnswer, incorrectAnswers) {

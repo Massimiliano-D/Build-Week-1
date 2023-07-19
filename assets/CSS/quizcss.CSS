@@ -14,11 +14,17 @@ header img {
   display: inline-block;
 }
 #torta {
+  color: white;
+  font-weight: bold;
   display: inline-block;
+  text-align: center;
+  line-height: 5em;
   width: 5em;
   height: 5em;
   border-radius: 50%;
-  background-color: brown;
+  background-color: transparent;
+  border: 1em solid aqua;
+  border-radius: 50%;
 }
 header div {
   display: inline-block;
