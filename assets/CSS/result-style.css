@@ -3,8 +3,8 @@ body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1.7em;
+  padding-bottom: 1.7em;
   margin: 0;
 }
 .all {
@@ -64,11 +64,13 @@ nav h1 {
 #TORTA {
   display: inline-block;
   vertical-align: middle;
-  width: 20em;
-  height: 20em;
+  width: 15em;
+  height: 15em;
   border-radius: 50%;
-  background-color: brown;
+  background-color: transparent;
+  border: 4em solid rgb(176, 17, 112);
 }
+
 .rgt {
   text-align: right;
   display: inline-block;
@@ -78,8 +80,6 @@ nav h1 {
 }
 .titoletto {
   font-size: 0.4em;
-}
-#content {
 }
 span {
   font-size: 1.25em;
@@ -100,4 +100,13 @@ button {
 #footer {
   margin-left: 1.563em;
   margin-top: 3.75em;
+}
+.internoh5 {
+  padding-top: 2.5em;
+}
+.congrat {
+  color: aqua;
+}
+.resultText {
+  font-size: small;
 }
