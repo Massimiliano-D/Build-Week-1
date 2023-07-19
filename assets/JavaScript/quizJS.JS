@@ -100,9 +100,6 @@ for (let i = 0; i < questions.length; i++) {
 function getRandomQuestionIndex() {
   return Math.floor(Math.random() * questions.length);
 }
-
-// Ottiene una domanda casuale e crea i bottoni corrispondenti
-
 // const advanceQuestions = () => {
 //   const span = document.querySelector("span");
 
@@ -159,9 +156,9 @@ const numQuestions = () => {
   num += 1;
   footer.appendChild(h3);
   let allH3 = document.querySelectorAll("h3");
-  h3.innerHTML = "QUESTION <span></span>/10";
+  h3.innerHTML = `QUESTION <span>${num}</span>/10`;
   let span = document.querySelector("span");
-  span.innerText = num;
+  // span.innerHTML = `${num}`;
   console.log(num);
 };
 
