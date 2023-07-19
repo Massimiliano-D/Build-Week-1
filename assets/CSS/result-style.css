@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Outfit:wght@400;800&display=swap");
+body {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0;
+}
+.all {
+  text-align: center;
+}
+header img {
+  width: 9.375em;
+  padding-bottom: 1.5em;
+  padding-left: 20em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  color: white;
+}
+p,
+li,
+h3 {
+  font-family: "Inter", sans-serif;
+}
+h2,
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 3.125em;
+  line-height: 1.1em;
+}
+
+nav p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 1.563em;
+  line-height: 1.1em;
+  margin-top: 0;
+}
+nav {
+  line-height: 1.1em;
+  margin: 0;
+}
+nav h1 {
+  margin-top: 0em;
+}
+
+.lft {
+  text-align: left;
+  display: inline-block;
+  margin-block: 0;
+  vertical-align: middle;
+  padding-inline: 2.5em;
+}
+#TORTA {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background-color: brown;
+}
+.rgt {
+  text-align: right;
+  display: inline-block;
+  margin-block: 0;
+  vertical-align: middle;
+  padding-inline: 2.5em;
+}
+.titoletto {
+  font-size: 0.4em;
+}
+#content {
+}
+span {
+  font-size: 1.25em;
+}
+h1 {
+  margin-bottom: 0;
+}
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.3em;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  box-shadow: 0em 0em 0.2em 0em white;
+  padding: 0.8em 2.7em;
+}
+#footer {
+  margin-left: 1.563em;
+  margin-top: 3.75em;
+}
