@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Outfit:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Outfit:wght@300&display=swap");
 
 body {
   margin: 0;
@@ -25,7 +25,6 @@ header img {
   height: 6.5em;
   border-radius: 50%;
   background-color: brown;
-
 }
 
 header div {
@@ -36,18 +35,17 @@ header div {
 }
 
 .titoloBold {
-  font-family: 'Outfit', sans-serif;
-
+  font-family: "Outfit", sans-serif;
 }
 
 .question {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: xx-large;
   margin-top: 6em;
 }
 
 h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .bottoni {
@@ -61,17 +59,16 @@ h3 {
   border-color: rgba(255, 255, 255, 0.226);
   width: 25em;
   height: 5em;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: bolder;
-
 }
 
 .pinkButton {
   /* background-color: rgb(194, 0, 145); */
   background-image: linear-gradient(180deg, rgb(187, 2, 125), rgb(139, 2, 98));
   border-color: rgba(156, 4, 131, 0.226);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: bolder;
 }
