@@ -100,32 +100,6 @@ for (let i = 0; i < questions.length; i++) {
 function getRandomQuestionIndex() {
   return Math.floor(Math.random() * questions.length);
 }
-<<<<<<< Updated upstream
-let indexOfUsedQuestions = [];
-
-// Ottiene una domanda casuale e crea i bottoni corrispondenti
-function generateRandomQuestion() {
-  const randomQuestionIndex = getRandomQuestionIndex();
-  const randomQuestion = questions[randomQuestionIndex];
-  const correctAnswer = randomQuestion.correct_answer;
-  const incorrectAnswers = randomQuestion.incorrect_answers.flat();
-  let h1 = document.querySelector("h1");
-  h1.innerText = randomQuestion.question;
-  indexOfUsedQuestions.push(randomQuestionIndex);
-  createButtons(correctAnswer, incorrectAnswers);
-}
-// console.log(indexOfUsedQuestions);
-// Esegui la generazione di una domanda casuale
-generateRandomQuestion();
-const advanceQuestions = () => {
-  const span = document.querySelector("span");
-
-  for (let i = 0; i < 10; i++) {
-    span.innerText = i + 1;
-    break;
-  }
-};
-=======
 // const advanceQuestions = () => {
 //   const span = document.querySelector("span");
 
@@ -219,4 +193,3 @@ const startTime = () => {
 };
 startTime();
 numQuestions();
->>>>>>> Stashed changes
