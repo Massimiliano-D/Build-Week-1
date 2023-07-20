@@ -40,8 +40,13 @@ header div {
 
 }
 
+<<<<<<< Updated upstream
 .question {
   font-family: 'Outfit', sans-serif;
+=======
+#question, .question {
+  font-family: "Outfit", sans-serif;
+>>>>>>> Stashed changes
   font-size: xx-large;
   margin-top: 6em;
 }
