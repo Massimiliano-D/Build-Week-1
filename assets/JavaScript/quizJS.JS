@@ -93,21 +93,6 @@ let questions = [
 
 questions = mischiaArray(questions);
 
-<<<<<<< Updated upstream
-// Genera un indice casuale per selezionare una domanda dall'array
-function getRandomQuestionIndex() {
-  return Math.floor(Math.random() * questions.length);
-}
-const advanceQuestions = () => {
-  const span = document.querySelector("span");
-
-  for (let i = 0; i < 10; i++) {
-    span.innerText = i + 1;
-    break;
-  }
-};
-let indexOfUsedQuestions = [];
-=======
 function inizia() {
   // se le domande sono finite
   if (risposte.length == questions.length) {
@@ -154,7 +139,6 @@ function inizia() {
         
       </div>
     </div>
->>>>>>> Stashed changes
 
     <h2 class="rgt">
       Wrong <br /><strong>` +
@@ -177,20 +161,6 @@ function inizia() {
   }
 }
 
-<<<<<<< Updated upstream
-function createButtons(correctAnswer, incorrectAnswers) {
-  removeAllButtons(); // Rimuovi tutti i bottoni precedenti prima di creare quelli nuovi
-
-  const totalOptions = incorrectAnswers.length + 1;
-  const numButtons = correctAnswer === "True" || correctAnswer === "False" ? 2 : totalOptions;
-
-  for (let i = 0; i < numButtons; i++) {
-    const button = document.createElement("button");
-    button.innerText = i === 0 ? correctAnswer : incorrectAnswers[i - 1];
-    document.body.appendChild(button);
-    let buttons = document.querySelectorAll("button");
-    buttons[i].addEventListener("click", generateRandomQuestion);
-=======
 function prossimaDomanda(obj) {
   answer.textContent = obj.question;
   let risposte = [];
@@ -214,7 +184,6 @@ function prossimaDomanda(obj) {
       rispondi(obj);
     });
     answer.appendChild(bottone);
->>>>>>> Stashed changes
   }
 }
 
