@@ -1,4 +1,13 @@
-const questions = [
+const answer = document.getElementById("answer");
+const quest = document.getElementById("question");
+let contaRisp = 0;
+
+//array con le risposte
+let risposte = [];
+
+// array con le domande da rispondere
+
+let questions = [
   {
     category: "Science: Computers",
     type: "multiple",
@@ -82,104 +91,141 @@ const questions = [
   },
 ];
 
-let correctAnswer = [];
-for (let i = 0; i < questions.length; i++) {
-  correctAnswer.push(questions[i].correct_answer);
-}
-let incorrectAnswers = [];
-for (let i = 0; i < questions.length; i++) {
-  incorrectAnswers.push(questions[i].incorrect_answers);
-}
-console.log(incorrectAnswers);
-let domande = [];
-for (let i = 0; i < questions.length; i++) {
-  domande.push(questions[i].question);
-}
+questions = mischiaArray(questions);
 
-// Genera un indice casuale per selezionare una domanda dall'array
-function getRandomQuestionIndex() {
-  return Math.floor(Math.random() * questions.length);
-}
-// const advanceQuestions = () => {
-//   const span = document.querySelector("span");
+function inizia() {
+  // se le domande sono finite
+  if (risposte.length == questions.length) {
+    console.log(risposte);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    let percentualeSuccesso = calcolaPercentualeTrue();
+    console.log(percentualeSuccesso);
+    let risultato = document.getElementById("answer");
+    let risultEsame = " hai passato l'esame!";
+    let risultEsameDue = "complimenti!";
+    const metàLunghezza = questions.length / 2;
+    // Verifichiamo se percentualeSuccesso.trueCount è minore della metà della lunghezza di questions
+    if (percentualeSuccesso.trueCount < metàLunghezza) {
+      risultEsame = "non hai passato l'esame!";
+      risultEsameDue = "riprova!";
+    }
+    risultato.outerHTML =
+      ` <div class="all">
+<main>
+  <nav>
+    <h1><strong>Results</strong></h1>
+    <p>The summary of your answers:</p>
+  </nav>
+  <div id="content">
+    <h2 class="lft">Correct <br /><strong>` +
+      percentualeSuccesso.percentualeTrue +
+      `%</strong> <br /><span class="titoletto">` +
+      percentualeSuccesso.trueCount +
+      `/` +
+      questions.length +
+      ` questions</span></h2>
 
-//   for (let i = 0; i < 10; i++) {
-//     span.innerText = i + 1;
-//     break;
-//   }
-// };
-let indexOfUsedQuestions = [];
-let indexOfFooter = [];
-for (let i = 1; i <= 10; i++) {
-  indexOfFooter.push(i);
-}
-console.log(indexOfFooter);
-const removeFooter = () => {
-  let h3 = document.querySelectorAll("h3");
-  h3[0].remove();
-};
+    <div id="TORTA">
+      <div class="resultText">
+      <h3 class="internoh5">
+      ` +
+      risultEsame +
+      ` <br />
+      <strong class="congrat">` +
+      risultEsameDue +
+      `</strong>
+    </h3>
+   
+        
+      </div>
+    </div>
 
-function generateRandomQuestion() {
-  // Controlla se sono state esaurite tutte le domande disponibili
-  if (indexOfUsedQuestions.length === questions.length) {
-    alert("Hai esaurito tutte le domande disponibili!");
-    return;
+    <h2 class="rgt">
+      Wrong <br /><strong>` +
+      percentualeSuccesso.percentualeFalse +
+      `%</strong> <br />
+      <span class="titoletto">` +
+      percentualeSuccesso.falseCount +
+      `/` +
+      questions.length +
+      ` questions</span>
+    </h2>
+  </div>
+  <div id="footer"><button>RATE US</button></div>
+</main>
+</div>`;
+  } else {
+    //altrimenti pusha la prossima domanda
+    prossimaDomanda(questions[contaRisp]);
+    contaRisp++;
   }
-
-  // Genera un indice casuale per selezionare una domanda non ancora utilizzata
-  let randomQuestionIndex;
-  do {
-    randomQuestionIndex = getRandomQuestionIndex();
-  } while (indexOfUsedQuestions.includes(randomQuestionIndex));
-
-  indexOfUsedQuestions.push(randomQuestionIndex); // Aggiungi l'indice alla lista delle domande utilizzate
-
-  const randomQuestion = questions[randomQuestionIndex];
-  const correctAnswer = randomQuestion.correct_answer;
-  const incorrectAnswers = randomQuestion.incorrect_answers.flat();
-
-  let h1 = document.querySelector("h1");
-  h1.innerText = randomQuestion.question;
-
-  createButtons(correctAnswer, incorrectAnswers);
-}
-generateRandomQuestion();
-function removeAllButtons() {
-  const buttons = document.querySelectorAll("button");
-  buttons.forEach((button) => button.remove());
 }
 
-let num = 0;
-const numQuestions = () => {
-  let footer = document.querySelector("footer");
-  let h3 = document.createElement("h3");
-  num += 1;
-  footer.appendChild(h3);
-  let allH3 = document.querySelectorAll("h3");
-  h3.innerHTML = `QUESTION <span>${num}</span>/10`;
-  let span = document.querySelector("span");
-  // span.innerHTML = `${num}`;
-  console.log(num);
-};
-
-function createButtons(correctAnswer, incorrectAnswers) {
-  removeAllButtons(); // Rimuovi tutti i bottoni precedenti prima di creare quelli nuovi
-
-  const totalOptions = incorrectAnswers.length + 1;
-  const numButtons = correctAnswer === "True" || correctAnswer === "False" ? 2 : totalOptions;
-  let div = document.getElementById("answer");
-  for (let i = 0; i < numButtons; i++) {
-    const button = document.createElement("button");
-    button.innerText = i === 0 ? correctAnswer : incorrectAnswers[i - 1];
-    div.appendChild(button);
-    let buttons = document.querySelectorAll("button");
-    buttons[i].addEventListener("click", (event) => {
-      generateRandomQuestion();
-      numQuestions();
-      removeFooter();
+function prossimaDomanda(obj) {
+  answer.textContent = obj.question;
+  let risposte = [];
+  console.log(risposte);
+  risposte.push({ risposta: obj.correct_answer, correct: true });
+  console.log(risposte);
+  let br = document.createElement("br");
+  answer.appendChild(br);
+  for (let i = 0; i < obj.incorrect_answers.length; i++) {
+    risposte.push({ risposta: obj.incorrect_answers[i], correct: false });
+  }
+  console.log(risposte);
+  risposte = mischiaArray(risposte);
+  for (let i = 0; i < risposte.length; i++) {
+    //creo un bottone dinamicamente
+    let bottone = document.createElement("button");
+    bottone.textContent = risposte[i].risposta;
+    bottone.classList.add("bottoni");
+    bottone.addEventListener("click", function () {
+      const obj = risposte[i];
+      rispondi(obj);
     });
+    answer.appendChild(bottone);
   }
 }
+
+// funzione per mischiare gli ogetti contenuti nel array
+function mischiaArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function rispondi(test) {
+  risposte.push(test);
+  inizia();
+}
+
+// Funzione per calcolare la percentuale di 'true' rispetto agli elementi totali
+function calcolaPercentualeTrue() {
+  // Contatori per 'true' e 'false'
+  let trueCount = 0;
+  let falseCount = 0;
+
+  // Itera sugli oggetti dell'array
+  for (const oggetto of risposte) {
+    if (oggetto.correct === true) {
+      trueCount++;
+    } else {
+      falseCount++;
+    }
+  }
+
+  // Calcola la percentuale di 'true'
+  const percentualeTrue = (trueCount / (trueCount + falseCount)) * 100;
+  // Calcola la percentuale di 'false'
+  const percentualeFalse = (falseCount / (trueCount + falseCount)) * 100;
+
+  return { percentualeTrue, percentualeFalse, trueCount, falseCount };
+}
+
+//avvio il codice
+prossimaDomanda(questions[0]);
 
 const startTime = () => {
   let seconds = 60;
@@ -195,4 +241,3 @@ const startTime = () => {
   }, 1000);
 };
 startTime();
-numQuestions();
