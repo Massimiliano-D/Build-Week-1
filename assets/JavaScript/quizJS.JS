@@ -1,4 +1,4 @@
-const questions = [
+let questions = [
   {
     category: "Science: Computers",
     type: "multiple",
@@ -82,32 +82,20 @@ const questions = [
   },
 ];
 
-let correctAnswer = [];
-for (let i = 0; i < questions.length; i++) {
-  correctAnswer.push(questions[i].correct_answer);
-}
-let incorrectAnswers = [];
-for (let i = 0; i < questions.length; i++) {
-  incorrectAnswers.push(questions[i].incorrect_answers);
-}
-console.log(incorrectAnswers);
-let domande = [];
-for (let i = 0; i < questions.length; i++) {
-  domande.push(questions[i].question);
-}
+// const startTime = () => {
+//   let seconds = 60;
+//   let torta = document.getElementById("torta");
 
-// Genera un indice casuale per selezionare una domanda dall'array
-function getRandomQuestionIndex() {
-  return Math.floor(Math.random() * questions.length);
-}
-// const advanceQuestions = () => {
-//   const span = document.querySelector("span");
-
-//   for (let i = 0; i < 10; i++) {
-//     span.innerText = i + 1;
-//     break;
-//   }
+//   let timer = setInterval(function () {
+//     seconds--;
+//     torta.innerText = seconds;
+//     if (seconds <= 0) {
+//       console.log(seconds);
+//       clearInterval(timer);
+//     }
+//   }, 1000);
 // };
+<<<<<<< Updated upstream
 let indexOfUsedQuestions = [];
 let indexOfFooter = [];
 for (let i = 1; i <= 10; i++) {
@@ -193,3 +181,7 @@ const startTime = () => {
 };
 startTime();
 numQuestions();
+=======
+// startTime();
+// numQuestions();
+>>>>>>> Stashed changes
