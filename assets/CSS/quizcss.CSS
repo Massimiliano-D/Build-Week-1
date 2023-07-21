@@ -17,25 +17,13 @@ header img {
   color: white;
   font-weight: bold;
   display: inline-block;
-<<<<<<< Updated upstream
-  text-align: center;
-  line-height: 5em;
-  width: 5em;
-  height: 5em;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1em solid aqua;
-=======
   position: static;
   text-align: center;
 
   width: 6.5em;
   height: 6.5em;
->>>>>>> Stashed changes
   border-radius: 50%;
 }
-<<<<<<< Updated upstream
-=======
 #torta p {
   color: white;
   font-family: "Outfit", sans-serif;
@@ -44,15 +32,12 @@ header img {
   line-height: 4em;
 }
 
->>>>>>> Stashed changes
 header div {
   display: inline-block;
   position: relative;
   left: 25em;
   top: 1.3em;
 }
-<<<<<<< Updated upstream
-=======
 
 .titoloBold {
   font-family: "Outfit", sans-serif;
@@ -93,4 +78,3 @@ h3 {
   font-size: 1em;
   font-weight: bolder;
 }
->>>>>>> Stashed changes
