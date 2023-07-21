@@ -182,6 +182,7 @@ function prossimaDomanda(obj) {
     bottone.addEventListener("click", function () {
       const obj = risposte[i];
       rispondi(obj);
+      pulisciTimer();
     });
     answer.appendChild(bottone);
   }
@@ -226,10 +227,9 @@ function calcolaPercentualeTrue() {
 
 //avvio il codice
 prossimaDomanda(questions[0]);
-
-const startTime = () => {
-  let seconds = 60;
-  let torta = document.getElementById("torta");
+let seconds = 60;
+const startTime = (event) => {
+  let torta = document.querySelector("div p");
 
   let timer = setInterval(function () {
     seconds--;
@@ -237,7 +237,15 @@ const startTime = () => {
     if (seconds <= 0) {
       console.log(seconds);
       clearInterval(timer);
+      contaRisp += 1;
+      prossimaDomanda(questions[contaRisp]);
+      risposte.push({ risposta: questions[0].incorrect_answers, correct: false });
+      pulisciTimer();
+      startTime();
     }
   }, 1000);
 };
 startTime();
+const pulisciTimer = () => {
+  seconds = 60;
+};
