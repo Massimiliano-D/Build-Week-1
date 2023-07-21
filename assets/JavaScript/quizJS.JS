@@ -162,13 +162,13 @@ function inizia() {
 }
 
 function prossimaDomanda(obj) {
-  answer.textContent = obj.question;
+  quest.textContent = obj.question;
   let risposte = [];
   console.log(risposte);
   risposte.push({ risposta: obj.correct_answer, correct: true });
   console.log(risposte);
   let br = document.createElement("br");
-  answer.appendChild(br);
+  quest.appendChild(br);
   for (let i = 0; i < obj.incorrect_answers.length; i++) {
     risposte.push({ risposta: obj.incorrect_answers[i], correct: false });
   }
@@ -183,11 +183,11 @@ function prossimaDomanda(obj) {
       const obj = risposte[i];
       rispondi(obj);
     });
-    answer.appendChild(bottone);
+    quest.appendChild(bottone);
   }
 }
 
-// funzione per mischiare gli ogetti contenuti nel array
+// funzione per mischiare gli oggetti contenuti nel array
 function mischiaArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

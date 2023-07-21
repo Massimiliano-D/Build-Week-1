@@ -44,6 +44,11 @@ h3 {
     fill-opacity: 40%;
 }
 
+/* TENTATIVO STARS */
+.stars:hover {
+    fill: aqua;
+}
+
 input {
     font-family: 'Inter', sans-serif;
     background-color: transparent;
@@ -72,4 +77,8 @@ button {
     border-right: 2em solid aqua;
     box-shadow: 0em 0em 1.25em 0em aqua;
     margin-top: 3em;
+}
+
+.click {
+    fill: red;
 }
