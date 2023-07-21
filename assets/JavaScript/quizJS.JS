@@ -162,13 +162,13 @@ function inizia() {
 }
 
 function prossimaDomanda(obj) {
-  quest.textContent = obj.question;
+  answer.textContent = obj.question;
   let risposte = [];
   console.log(risposte);
   risposte.push({ risposta: obj.correct_answer, correct: true });
   console.log(risposte);
   let br = document.createElement("br");
-  quest.appendChild(br);
+  answer.appendChild(br);
   for (let i = 0; i < obj.incorrect_answers.length; i++) {
     risposte.push({ risposta: obj.incorrect_answers[i], correct: false });
   }
@@ -183,7 +183,7 @@ function prossimaDomanda(obj) {
       const obj = risposte[i];
       rispondi(obj);
     });
-    quest.appendChild(bottone);
+    answer.appendChild(bottone);
   }
 }
 
