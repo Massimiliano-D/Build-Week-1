@@ -82,6 +82,7 @@ const questions = [
   },
 ];
 
+<<<<<<< Updated upstream
 let correctAnswer = [];
 for (let i = 0; i < questions.length; i++) {
   correctAnswer.push(questions[i].correct_answer);
@@ -94,6 +95,76 @@ console.log(incorrectAnswers);
 let domande = [];
 for (let i = 0; i < questions.length; i++) {
   domande.push(questions[i].question);
+=======
+questions = mischiaArray(questions);
+
+function inizia() {
+  // se le domande sono finite
+  if (risposte.length == questions.length) {
+    console.log(risposte);
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    let percentualeSuccesso = calcolaPercentualeTrue();
+    console.log(percentualeSuccesso);
+    let risultato = document.getElementById("answer");
+    let risultEsame = " hai passato l'esame!";
+    let risultEsameDue = "complimenti!";
+    const metàLunghezza = questions.length / 2;
+    // Verifichiamo se percentualeSuccesso.trueCount è minore della metà della lunghezza di questions
+    if (percentualeSuccesso.trueCount < metàLunghezza) {
+      risultEsame = "non hai passato l'esame!";
+      risultEsameDue = "riprova!";
+    }
+    risultato.outerHTML =
+      ` <div class="all">
+<main>
+  <nav>
+    <h1><strong>Results</strong></h1>
+    <p>The summary of your answers:</p>
+  </nav>
+  <div id="content">
+    <h2 class="lft">Correct <br /><strong>` +
+      percentualeSuccesso.percentualeTrue +
+      `%</strong> <br /><span class="titoletto">` +
+      percentualeSuccesso.trueCount +
+      `/` +
+      questions.length +
+      ` questions</span></h2>
+
+    <div id="TORTA">
+      <div class="resultText">
+      <h3 class="internoh5">
+      ` +
+      risultEsame +
+      ` <br />
+      <strong class="congrat">` +
+      risultEsameDue +
+      `</strong>
+    </h3>
+   
+        
+      </div>
+    </div>
+
+    <h2 class="rgt">
+      Wrong <br /><strong>` +
+      percentualeSuccesso.percentualeFalse +
+      `%</strong> <br />
+      <span class="titoletto">` +
+      percentualeSuccesso.falseCount +
+      `/` +
+      questions.length +
+      ` questions</span>
+    </h2>
+  </div>
+  <div id="footer"><button><a href="review.html">RATE US</a></button></div>
+</main>
+</div>`;
+  } else {
+    //altrimenti pusha la prossima domanda
+    prossimaDomanda(questions[contaRisp]);
+    contaRisp++;
+  }
+>>>>>>> Stashed changes
 }
 
 // Genera un indice casuale per selezionare una domanda dall'array

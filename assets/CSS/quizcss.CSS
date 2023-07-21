@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Outfit:wght@300&display=swap");
+
+body {
+  margin: 0;
+  background-image: url(/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+header img {
+  width: 10em;
+  padding-left: 15em;
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+#torta {
+  display: inline-block;
+  width: 6.5em;
+  height: 6.5em;
+  border-radius: 50%;
+  background-color: brown;
+}
+
+header div {
+  display: inline-block;
+  position: relative;
+  left: 40em;
+  top: 1.3em;
+}
+
+.titoloBold {
+  font-family: "Outfit", sans-serif;
+}
+
+#question,
+.question {
+  font-family: "Outfit", sans-serif;
+  font-size: xx-large;
+  margin-top: 6em;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+}
+
+.bottoni {
+  color: white;
+  background-color: rgba(128, 128, 128, 0.199);
+  /* padding: 2em;
+  padding-inline: 5em; */
+  border-radius: 3em;
+  box-shadow: -1px -3px 2px white;
+  fill-opacity: 20%;
+  border-color: rgba(255, 255, 255, 0.226);
+  width: 25em;
+  height: 5em;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: bolder;
+  margin-block: 2em;
+  margin-inline: 1em;
+}
+
+.pinkButton {
+  /* background-color: rgb(194, 0, 145); */
+  background-image: linear-gradient(180deg, rgb(187, 2, 125), rgb(139, 2, 98));
+  border-color: rgba(156, 4, 131, 0.226);
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: bolder;
+}
+#answer {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-inline: 200px;
+}

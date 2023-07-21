@@ -87,11 +87,14 @@ span {
 h1 {
   margin-bottom: 0;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 button {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1.3em;
-  color: white;
   background-color: transparent;
   border: 2px solid white;
   box-shadow: 0em 0em 0.2em 0em white;
