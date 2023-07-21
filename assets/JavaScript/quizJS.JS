@@ -112,6 +112,7 @@ function generateRandomQuestion() {
     alert("Hai esaurito tutte le domande disponibili!");
     return;
   }
+<<<<<<< Updated upstream
 
   // Genera un indice casuale per selezionare una domanda non ancora utilizzata
   let randomQuestionIndex;
@@ -162,13 +163,71 @@ function createButtons(correctAnswer, incorrectAnswers) {
       generateRandomQuestion();
       numQuestions();
       removeFooter();
+=======
+  console.log(risposte);
+  risposte = mischiaArray(risposte);
+  for (let i = 0; i < risposte.length; i++) {
+    //creo un bottone dinamicamente
+    let bottone = document.createElement("button");
+    bottone.textContent = risposte[i].risposta;
+    bottone.classList.add("bottoni");
+    bottone.addEventListener("click", function () {
+      const obj = risposte[i];
+      rispondi(obj);
+      pulisciTimer();
+>>>>>>> Stashed changes
     });
   }
 }
 
+<<<<<<< Updated upstream
 const startTime = () => {
   let seconds = 60;
   let torta = document.getElementById("torta");
+=======
+// funzione per mischiare gli ogetti contenuti nel array
+function mischiaArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function rispondi(test) {
+  risposte.push(test);
+  inizia();
+}
+
+// Funzione per calcolare la percentuale di 'true' rispetto agli elementi totali
+function calcolaPercentualeTrue() {
+  // Contatori per 'true' e 'false'
+  let trueCount = 0;
+  let falseCount = 0;
+
+  // Itera sugli oggetti dell'array
+  for (const oggetto of risposte) {
+    if (oggetto.correct === true) {
+      trueCount++;
+    } else {
+      falseCount++;
+    }
+  }
+
+  // Calcola la percentuale di 'true'
+  const percentualeTrue = (trueCount / (trueCount + falseCount)) * 100;
+  // Calcola la percentuale di 'false'
+  const percentualeFalse = (falseCount / (trueCount + falseCount)) * 100;
+
+  return { percentualeTrue, percentualeFalse, trueCount, falseCount };
+}
+
+//avvio il codice
+prossimaDomanda(questions[0]);
+let seconds = 60;
+const startTime = (event) => {
+  let torta = document.querySelector("div p");
+>>>>>>> Stashed changes
 
   let timer = setInterval(function () {
     seconds--;
@@ -176,12 +235,23 @@ const startTime = () => {
     if (seconds <= 0) {
       console.log(seconds);
       clearInterval(timer);
+      contaRisp += 1;
+      prossimaDomanda(questions[contaRisp]);
+      risposte.push({ risposta: questions[0].incorrect_answers, correct: false });
+      pulisciTimer();
+      startTime();
     }
   }, 1000);
 };
 startTime();
+<<<<<<< Updated upstream
 numQuestions();
 =======
 // startTime();
 // numQuestions();
+>>>>>>> Stashed changes
+=======
+const pulisciTimer = () => {
+  seconds = 60;
+};
 >>>>>>> Stashed changes
