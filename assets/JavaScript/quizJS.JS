@@ -248,4 +248,10 @@ const startTime = (event) => {
 startTime();
 const pulisciTimer = () => {
   seconds = 60;
+  if(contaRisp === 9){
+    let tempo = document.querySelector("div p")
+    let ciambella = document.getElementById("torta")
+    tempo.remove()
+    ciambella.remove()
+  }
 };
