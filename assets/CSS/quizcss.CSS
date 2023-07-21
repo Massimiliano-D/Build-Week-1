@@ -30,35 +30,23 @@ header div {
   top: 1.3em;
 }
 
-<<<<<<< Updated upstream
-.titoloBold {
-  font-family: 'Outfit', sans-serif;
 
+
+#question {
+  font-family: "Outfit", sans-serif;
+  font-size: xx-large;
 }
 
-<<<<<<< Updated upstream
-.question {
-  font-family: 'Outfit', sans-serif;
-=======
-#question, .question {
-  font-family: "Outfit", sans-serif;
->>>>>>> Stashed changes
-  font-size: xx-large;
-=======
 .content {
   font-family: "Outfit", sans-serif;
->>>>>>> Stashed changes
   margin-top: 6em;
   text-align: center;
   color: white;
 }
 
-<<<<<<< Updated upstream
 h3 {
   font-family: 'Outfit', sans-serif;
 }
-=======
->>>>>>> Stashed changes
 
 .bottoni {
   color: white;
@@ -71,13 +59,8 @@ h3 {
   border-color: rgba(255, 255, 255, 0.226);
   width: 20em;
   height: 5em;
-<<<<<<< Updated upstream
-  font-family: 'Inter', sans-serif;
-  font-size: 1em;
-=======
   font-family: "Inter", sans-serif;
   font-size: 0.7em;
->>>>>>> Stashed changes
   font-weight: bolder;
 
 }

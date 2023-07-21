@@ -1,17 +1,12 @@
-const stars = document.querySelectorAll(".stars");
 
-// stars.forEach((star) => {
-//   star.onclick = selection;
-// });
-let starI = 0;
-function selection(event) {
-  let div = document.getElementById("starsBox");
-  for (let i = 0; i < stars.length; i++) {
-    if (stars[i] === event.target) {
-      console.log("ciao");
-    } else {
-      console.log("ciao2");
-    }
+const stars = document.querySelectorAll(".stars");
+stars.forEach((star, index) => {
+  star.onclick = () => selection(index);
+});
+
+function selection(clickedIndex) {
+  for (let i = 0; i <= clickedIndex; i++) {
+    stars[i].classList.add("selected");
   }
 }
 
