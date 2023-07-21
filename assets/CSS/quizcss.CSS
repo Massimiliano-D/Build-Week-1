@@ -7,11 +7,6 @@ body {
   background-size: cover;
 }
 
-.content {
-  text-align: center;
-  color: white;
-}
-
 header img {
   width: 10em;
   padding-left: 15em;
@@ -34,15 +29,18 @@ header div {
   top: 1.3em;
 }
 
-.titoloBold {
-  font-family: "Outfit", sans-serif;
-}
 
 
-#question, .question {
+#question {
   font-family: "Outfit", sans-serif;
   font-size: xx-large;
+}
+
+.content {
+  font-family: "Outfit", sans-serif;
   margin-top: 6em;
+  text-align: center;
+  color: white;
 }
 
 h3 {
@@ -55,13 +53,13 @@ h3 {
   /* padding: 2em;
   padding-inline: 5em; */
   border-radius: 3em;
-  box-shadow: -1px -3px 2px white;
+  box-shadow: -1px -3px 2px rgb(255, 255, 255);
   fill-opacity: 20%;
   border-color: rgba(255, 255, 255, 0.226);
-  width: 25em;
+  width: 20em;
   height: 5em;
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bolder;
 }
 
