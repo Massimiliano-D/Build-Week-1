@@ -19,7 +19,14 @@ header img {
   width: 6.5em;
   height: 6.5em;
   border-radius: 50%;
-  background-color: brown;
+  background-color: transparent;
+  border: 1em solid aqua;
+  text-align: center;
+  line-height: 0.6em;
+  font-weight: bold;
+}
+#torta p {
+  font-size: 50px;
 }
 
 header div {
