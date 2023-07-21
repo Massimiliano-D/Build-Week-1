@@ -151,7 +151,7 @@ function inizia() {
       ` questions</span>
     </h2>
   </div>
-  <div id="footer"><button>RATE US</button></div>
+  <div id="footer"><button><a href="review.html">RATE US</a></button></div>
 </main>
 </div>`;
   } else {

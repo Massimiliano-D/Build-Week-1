@@ -41,7 +41,7 @@ h3 {
     padding-bottom: 2em;
     padding-top: 0em;
     fill: rgb(1, 3, 36);
-   
+
 }
 
 /* TENTATIVO STARS */
@@ -78,4 +78,9 @@ button {
     border-right: 2em solid aqua;
     box-shadow: 0em 0em 1.25em 0em aqua;
     margin-top: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

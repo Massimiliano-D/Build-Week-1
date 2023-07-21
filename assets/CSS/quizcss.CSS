@@ -36,6 +36,13 @@ header div {
   font-size: xx-large;
 }
 
+#answer {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-inline: 200px;
+}
+
 .content {
   font-family: "Outfit", sans-serif;
   margin-top: 6em;
@@ -53,21 +60,23 @@ h3 {
   /* padding: 2em;
   padding-inline: 5em; */
   border-radius: 3em;
-  box-shadow: -1px -3px 2px rgb(255, 255, 255);
+  box-shadow: -1px -3px 2px white;
   fill-opacity: 20%;
   border-color: rgba(255, 255, 255, 0.226);
-  width: 20em;
+  width: 25em;
   height: 5em;
   font-family: "Inter", sans-serif;
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: bolder;
+  margin-block: 2em;
+  margin-inline: 1em;
 }
 
-.pinkButton {
-  /* background-color: rgb(194, 0, 145); */
+/* .pinkButton {
+  background-color: rgb(194, 0, 145);
   background-image: linear-gradient(180deg, rgb(187, 2, 125), rgb(139, 2, 98));
   border-color: rgba(156, 4, 131, 0.226);
   font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: bolder;
-}
+} */
